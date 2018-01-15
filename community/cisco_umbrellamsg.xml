@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEVICEMESSAGES
+	 name="cisco_umbrella"
+	 displayname="Cisco Umbrella:custom"
+	 group="Web Logs"
+	 type="7104">
+<VERSION
+	 xml="1"
+	 revision="1"
+	 device="2.0"/>
+<TAGVALMAP/>
+<HEADER
+	 id1="HDR1"
+	 id2="HDR1"
+	 content="%cisco_umbrella_&lt;messageid&gt;-4:&lt;!payload&gt;"/>
+<MESSAGE
+	 id1="logs"
+	 id2="logs"
+	 eventcategory="1612000000"
+	 content="&quot;&lt;event_time_string&gt;&quot;,&quot;&lt;rulename&gt;&quot;,&quot;&lt;saddr&gt;&quot;,&quot;&lt;stransaddr&gt;&quot;,&quot;&lt;daddr&gt;&quot;,&quot;&lt;content_type&gt;&quot;,&quot;&lt;action&gt;&quot;,&quot;&lt;url&gt;&quot;,&quot;&lt;web_referer&gt;&quot;,&quot;&lt;user_agent&gt;&quot;,&quot;&lt;resultcode&gt;&quot;,&quot;&lt;fld1&gt;&quot;,&quot;&lt;fld2&gt;&quot;,&quot;&lt;fld3&gt;&quot;,&quot;&lt;checksum&gt;&quot;,&quot;&lt;fld4&gt;&quot;,&quot;&lt;fld5&gt;&quot;,&quot;&lt;fld6&gt;&quot;,&quot;&lt;fld7&gt;&quot;,&quot;&lt;fld8&gt;&quot;,&quot;&lt;fld9&gt;&quot;,&quot;&lt;group&gt;&quot;"/>
+</DEVICEMESSAGES>
