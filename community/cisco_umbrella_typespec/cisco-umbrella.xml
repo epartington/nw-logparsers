@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typespec>
+
+   <name>cisco_umbrella</name>
+   <type>file</type>
+   <prettyName>cisco_umbrella</prettyName>
+   <version>1.0</version>
+   <author>eric_partington</author>
+   <description>FileCollection specification for eventsource type "Cisco Umbrella" using file handler type "cisco_umbrella"</description>
+
+        <device>
+                <name>cisco_umbrella</name>
+                <parser>cisco_umbrella</parser>
+        </device>
+
+        <configuration>
+        </configuration>
+
+        <collection>
+                <file>
+                <parserId>file.cisco_umbrella</parserId>
+                <processorType>generic</processorType>
+                <dataStartLine>1</dataStartLine>
+                        <fieldDelim>,</fieldDelim>
+                        <idField></idField>
+                        <lineDelim>\n</lineDelim>
+                        <transformPrefixTag>cisco_umbrella_logs</transformPrefixTag>
+                        <transformReplaceFieldDelim>0</transformReplaceFieldDelim>
+                        <transformPrefixFilename>0</transformPrefixFilename>
+                        <transformMultipleDelimiterAsOne>0</transformMultipleDelimiterAsOne>
+                        <transformReplacementFieldDelim></transformReplacementFieldDelim>
+                </file>
+        </collection>
+</typespec>
