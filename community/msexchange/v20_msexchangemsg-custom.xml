@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEVICEMESSAGES
+	 name="msexchange"
+	 displayname="Microsoft Exchange"
+	 group="Mail Servers"
+	 type="7104">
+<VERSION
+	 xml="112"
+	 revision="108"
+	 checksum="e104042d058a931301fbf9678f5fe43a"
+	 device="2.0"/>
+	 <!-- https://community.rsa.com/docs/DOC-83425 -->
+	 <!-- copied from msexchange parser 20180402 -->
+<TAGVALMAP/>
+<MESSAGE
+	 id1="LOGbndEX_25008_LOGbndEX:01"
+	 id2="LOGbndEX_25008_LOGbndEX"
+	 eventcategory="1605000000"
+	 insertBefore="LOGbndEX_25008_LOGbndEX"
+	 functions="&lt;@event_time:*EVNTTIME($MSG,'%B %D %N:%U:%O %W',datetime)&gt;&lt;@event_user:*RMQ(event_user)&gt;"
+	 content="&lt;event_log&gt;,&lt;fld11&gt;,&lt;fld10&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld12&gt;,&lt;event_description&gt;Occurred: &lt;fld13&gt;Result:&lt;result&gt; Originating server: &lt;fld19&gt; Mailbox &lt;fld20&gt; Folder &lt;fld21&gt; Performed By &lt;fld22&gt; Client   Info: Client=&lt;user_agent&gt;IP address:&lt;saddr&gt; Process name:&lt;process&gt;&lt;fld15&gt;LogonType= [&lt;logon_type&gt;]&lt;fld16&gt;"/>
+<MESSAGE
+	 id1="LOGbndEX_25010_LOGbndEX:01"
+	 id2="LOGbndEX_25010_LOGbndEX"
+	 eventcategory="1605000000"
+	 insertBefore="LOGbndEX_25010_LOGbndEX"
+	 functions="&lt;@event_time:*EVNTTIME($MSG,'%B %D %N:%U:%O %W',datetime)&gt;&lt;@event_user:*RMQ(event_user)&gt;"
+	 content="&lt;event_log&gt;,&lt;fld11&gt;,&lt;fld10&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld12&gt;,&lt;event_description&gt;Occurred:&lt;fld13&gt;Result: &lt;result&gt; Originating server: &lt;fld19&gt; Mailbox &lt;fld20&gt; Folder &lt;fld21&gt; Performed By &lt;fld22&gt; Info: Client=&lt;user_agent&gt;IP address: &lt;saddr&gt; Process name:&lt;process&gt;&lt;fld15&gt;"/>
+<MESSAGE
+	 id1="LOGbndEX_25403_LOGbndEX:01"
+	 id2="LOGbndEX_25403_LOGbndEX"
+	 eventcategory="1605000000"
+	 insertBefore="LOGbndEX_25403_LOGbndEX"
+	 functions="&lt;@event_time:*EVNTTIME($MSG,'%B %D %N:%U:%O %W',datetime)&gt;&lt;@event_user:*RMQ(event_user)&gt;"
+	 content="&lt;event_log&gt;,&lt;fld11&gt;,&lt;fld10&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld12&gt;,&lt;event_description&gt; Occurred: &lt;fld13&gt; Parameters &lt;fld14&gt; Modified Properties &lt;fld15&gt;"/>
+</DEVICEMESSAGES>
