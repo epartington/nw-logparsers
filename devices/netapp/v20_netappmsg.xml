@@ -4,9 +4,9 @@
 	displayname="Netapp"
 	group="Storage">
 <VERSION
-		xml="33"
-		checksum="b741444997a27358b3e4bb0ea97373a4"
-		revision="113"
+		xml="37"
+		checksum="c7cf4bbc32fe05776769c442363cef40"
+		revision="116"
 		device="2.0"/>
 
 
@@ -74,6 +74,14 @@
 		name="eventType"
 		default="$NONE"
 		keyvaluepairs="AUS=&apos;Success Audit&apos;|AUF=&apos;Failure Audit&apos;|ERR=&apos;Error&apos;|WRN=&apos;Warning&apos;|INF=&apos;Information&apos;"/>
+	<VALUEMAP
+		name="getEventLegacyCategoryName"
+		default="Other.Default"
+		keyvaluepairs="1401060000=&apos;User.Activity.Successful Logins&apos;|1401070000=&apos;User.Activity.Logoff&apos;" />
+    <VALUEMAP
+		name="getEventLegacyCategory"
+		default="1901000000"
+		keyvaluepairs="IN=&apos;1401060000&apos;|END=&apos;1401070000&apos;" />	
 <MESSAGE
 	id1="040410"
 	id2="10/100/1000-V/e4a:ALERT"
@@ -5183,11 +5191,25 @@
 	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@result:created mirror resynchronization snapshot mirror_resync&gt;"
 	content=" &lt;fld3&gt;: created mirror resynchronization snapshot mirror_resync. &lt;fld1&gt;(&lt;fld30&gt;)" />
 <MESSAGE
+	id1="012924"
+	id2="raid.mirror.resync.snapcrtok:info"
+	eventcategory="1602000000"
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@hostname:*HDR(hhost)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@result:created mirror resynchronization snapshot mirror_resync&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	content=" Aggregate &lt;id&gt;: created mirror resynchronization snapshot mirror_resync. &lt;fld1&gt;(&lt;fld30&gt;)" />
+
+<MESSAGE
 	id1="012918"
 	id2="raid.mirror.resync.snapdelok:debug"
 	eventcategory="1602000000"
 	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@result:deleted mirror resynchronization snapshot mirror_resync&gt;"
 	content=" &lt;fld3&gt;: deleted mirror resynchronization snapshot mirror_resync.&lt;fld1&gt;(&lt;fld30&gt;)" />
+<MESSAGE
+	id1="012931"
+	id2="raid.mirror.resync.snapdelok:info"
+	eventcategory="1602000000"
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@hostname:*HDR(hhost)&gt;&lt;@result:deleted mirror resynchronization snapshot mirror_resync&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	content=" Aggregate &lt;id&gt;: deleted mirror resynchronization snapshot mirror_resync.&lt;fld1&gt;(&lt;fld30&gt;" />
+
 <MESSAGE
 	id1="030290"
 	id2="raid.mirror.resync.start:notice"
@@ -5613,8 +5635,8 @@
 	id1="040677"
 	id2="rc:debug"
 	eventcategory="1605030000"
-	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:root input&gt;"
-	content=" root:IN:&lt;interface&gt;:&lt;disposition&gt;" />
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:root input&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;&lt;@event_cat:*getEventLegacyCategory(action)&gt;&lt;@event_cat_name:*getEventLegacyCategoryName(event_cat)&gt;"
+	content=" &lt;username&gt;:&lt;action&gt;:&lt;interface&gt;:&lt;disposition&gt;" />
 	
 <MESSAGE
 	id1="030077"
@@ -7928,8 +7950,8 @@
 	id1="040682"
 	id2="telnet_0:debug"
 	eventcategory="1605000000"
-	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:shell command&gt;"
-	content=" &lt;username&gt;@[&lt;saddr&gt;]:&lt;action&gt;:&lt;service&gt;:&lt;disposition&gt;" />
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@hostname:*HDR(hhost)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;&lt;@event_description:shell command&gt;&lt;@event_cat:*getEventLegacyCategory(action)&gt;&lt;@event_cat_name:*getEventLegacyCategoryName(event_cat)&gt;"
+	content=" &lt;username&gt;@[{&lt;saddr&gt;_&lt;sport&gt;|&lt;saddr&gt;}]:&lt;action&gt;:&lt;service&gt;:&lt;disposition&gt;" />
 	
 <MESSAGE
 	id1="019000"
@@ -8568,6 +8590,13 @@
 	eventcategory="1605000000"
 	functions="&lt;@level:*SYSVAL($LEVEL)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;"
 	content="&lt;message&gt; " />
+<MESSAGE
+	id1="019908"
+	id2="wafl.vol.runningOutOfInodes:error"
+	eventcategory="1603020000"
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@hostname:*HDR(hhost)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;&lt;@info:*PARMVAL($MSG)&gt;"
+	content=" The file system on Volume &lt;id&gt; is using &lt;fld1&gt; percent or more of the files that can be contained on the volume." />
+
 <MESSAGE
 	id1="030298"
 	id2="worker_thread_03:error"
@@ -11419,8 +11448,8 @@
 	id1="040779"
 	id2="rshd_0:debug"
 	eventcategory="1605000000"
-	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:ssh2 shell command&gt;"
-	content=" &lt;username&gt;:&lt;action&gt;:ssh2 shell: &lt;disposition&gt;" />
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@hostname:*HDR(hhost)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;&lt;@event_description:ssh2 shell command&gt;&lt;@event_cat:*getEventLegacyCategory(action)&gt;&lt;@event_cat_name:*getEventLegacyCategoryName(event_cat)&gt;"
+	content=" &lt;username&gt;@[{&lt;saddr&gt;_&lt;sport&gt;|&lt;saddr&gt;}]:&lt;action&gt;:&lt;service&gt;:&lt;disposition&gt;" />
 <MESSAGE
 	id1="001013"
 	id2="asup.general.reminder:info"
@@ -11597,5 +11626,12 @@
 	eventcategory="1605000000" 
 	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;"
 	content="No redundancy in the failover configuration for 1 LIFs assigned to node &quot;&lt;node&gt;&quot;. LIFs: &lt;fld1&gt;" />
+
+<MESSAGE
+	id1="vsdr.net.LifNotReachable:error"
+	id2="vsdr.net.LifNotReachable:error"
+	eventcategory="1603040000" 
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@hostname:*HDR(hhost)&gt;&lt;@info:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	content=" The LIF &lt;fld1&gt; in DR partner Vserver of Vserver &lt;vsys&gt; is not reachable from the local cluster." />
 
 </DEVICEMESSAGES>

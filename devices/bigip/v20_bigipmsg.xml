@@ -4,9 +4,9 @@
 	displayname="F5 BigIP"
 	group="Switch">
 <VERSION
-		xml="77"
-		checksum="b75b87e8b19f66d828327dc2a5def554"
-		revision="111"
+		xml="82"
+		checksum="b4412dcb0b95dc1fc87f8a59a0942594"
+		revision="117"
 		device="2.0"/>
 
 
@@ -1580,8 +1580,20 @@
 		
 	
 	
-	
-			
+<MESSAGE
+	id1="000500"
+	id2="tmm"
+	eventcategory="1802000000"
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@a: redirect &gt;&lt;@event_description:*STRCAT(a,fld1)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',hmonth,hdate,htime)&gt;"
+	content="&lt;hostname&gt; &lt;severity&gt; &lt;agent&gt;[&lt;process_id&gt;]: Rule &lt;rulename&gt; &lt;&lt;HTTP_REQUEST&gt;: redirect &lt;fld1&gt; &lt;network_port&gt;" />
+
+<MESSAGE
+	id1="000501"
+	id2="tmm"
+	eventcategory="1802000000"
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description: WEBLogin login Portal Bypassed&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',hmonth,hdate,htime)&gt;"
+	content="&lt;hostname&gt; &lt;severity&gt; &lt;agent&gt;[&lt;process_id&gt;]: Rule &lt;rulename&gt; &lt;&lt;HTTP_REQUEST&gt;: WEBLogin login Portal Bypassed &lt;url&gt;" />
+
 <MESSAGE
 	id1="000197"
 	id2="tmm1"
@@ -1686,6 +1698,13 @@
 	eventcategory="1002000000"
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;"
 	content=" &lt;hostname&gt; &lt;agent&gt;[&lt;process_id&gt;]: DDoS--&gt; &lt;rulename&gt; from &lt;saddr&gt;" />
+<MESSAGE
+	id1="000370"
+	id2="tmm"
+	eventcategory="1609000000"
+	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@fqdn:*URL($FQDN,url)&gt;"
+	content=" &lt;hostname&gt; &lt;severity&gt; &lt;agent&gt;[&lt;process_id&gt;]: &lt;fld1&gt;:&lt;fld2&gt;: RESOLVED rrtype = &lt;fld3&gt;, wip = &lt;url&gt;, LDNS(&lt;domain&gt;) to vs(&lt;fld4&gt;) using &lt;pool_name&gt;" />
+
 <MESSAGE
 	id1="000362"
 	id2="tmm"

@@ -4,9 +4,9 @@
 	displayname="Linux"
 	group="Unix">
 <VERSION
-	xml="339"
-	checksum="79bff8662d462b48f9578c5c1ae03387"
-	revision="114"
+	xml="344"
+	checksum="1f783c68ec37544b00643a369fc8a559"
+	revision="116"
 	device="2.0" />
 
 
@@ -213,6 +213,12 @@
 	id2="2012"
 	content="&lt;hfld1&gt; &lt;hfld2&gt; &lt;hfld3&gt; node=&lt;hhost&gt; type=&lt;hfld4&gt; msg=&lt;messageid&gt;(&lt;hfld5&gt;): &lt;!payload:hfld4&gt;" /> 
 <HEADER
+	id1="3009"
+	id2="3009"
+	messageid="STRCAT('audit_log')"
+	content="&lt;hfld1&gt; &lt;hfld2&gt; &lt;hfld3&gt; &lt;hhost&gt; audit_log: type=&lt;hfld4&gt; msg=&lt;hfld6&gt;(&lt;hfld5&gt;): &lt;!payload:hfld4&gt;" /> 
+
+	<HEADER
 	id1="2009"
 	id2="2009"
 	content="&lt;hfld1&gt; &lt;hfld2&gt; &lt;hfld3&gt; &lt;hhost&gt; type=&lt;hfld4&gt; msg=&lt;messageid&gt;(&lt;hfld5&gt;): &lt;!payload:hfld4&gt;" /> 
@@ -2132,6 +2138,13 @@
 	eventcategory="1612000000"
 	functions="&lt;@event_time:*EVNTTIME($MSG,'%X',fld25)&gt;&lt;@hostname:*HDR(hhost)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_type:UNKNOWN&gt;"
 	content="&lt;agent&gt;: &lt;space1&gt;node=&lt;node&gt; type={UNKNOWN[&lt;fld1&gt;]|UNKNOWN} msg=audit(&lt;fld25&gt;.&lt;fld26&gt;:&lt;fld27&gt;): &lt;space&gt; proctitle=&lt;fld2&gt;" />
+
+<MESSAGE
+	id1="03812"
+	id2="audispd"
+	eventcategory="1612000000"
+	functions="&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',hfld1,hfld2,hfld3)&gt;&lt;@hostname:*HDR(hhost)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_type:CRED_DISP&gt;"
+	content="&lt;agent&gt;: node=&lt;node&gt; type=CRED_DISP msg=audit(&lt;fld25&gt;): user pid=&lt;process_id&gt; uid=&lt;uid&gt; auid=&lt;fld9&gt; ses=&lt;sessionid&gt; subj=&lt;subject&gt; msg=&apos;op=&lt;fld38&gt; acct=&quot;&lt;username&gt;&quot; exe=&quot;&lt;action&gt;&quot; hostname=&lt;shost&gt; addr=&lt;saddr&gt; terminal=&lt;terminal&gt; res=&lt;result&gt;&apos;" />
 
 
 <MESSAGE
@@ -14664,6 +14677,12 @@
 	functions="&lt;@hostname:*HDR(hhost)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;"
 	content="&lt;agent&gt;[&lt;process_id&gt;]: connect from &lt;saddr&gt; (&lt;fld1&gt;)" />
 <MESSAGE
+	id1="proftpd:01"
+	id2="proftpd"
+	eventcategory="1801020000"
+	functions="&lt;@hostname:*HDR(hhost)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:session opened for user&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %D %H:%T:%S',month,day,time)&gt;"
+	content="&lt;agent&gt;: &lt;application&gt;(&lt;process&gt;): session opened for user &lt;username&gt; by (uid=&lt;uid&gt;)" />
+<MESSAGE
 	id1="00015"
 	id2="proftpd"
 	eventcategory="1605000000"
@@ -16089,7 +16108,8 @@
 	id2="run-parts"
 	eventcategory="1605000000"
 	functions="&lt;@hostname:*HDR(hhost)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="&lt;agent&gt;(&lt;filename&gt;) {[&lt;process_id&gt;]:&lt;event_description&gt;| [&lt;event_description&gt;}" />
+	content="&lt;agent&gt;(&lt;filename&gt;) {[&lt;process_id&gt;]:&lt;event_description&gt;| [&lt;process_id&gt;] &lt;event_description&gt;|[&lt;process_id&gt; &lt;event_description&gt;|[&lt;event_description&gt;}" />
+
 
 <MESSAGE
 	id1="00871"
@@ -17413,7 +17433,7 @@
 	id2="setroubleshoot"
 	eventcategory="1502010000"
 	functions="&lt;@hostname:*HDR(hhost)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="&lt;event_description&gt;" />
+	content="{&lt;agent&gt;: &lt;event_description&gt; | &lt;event_description&gt;}" />
 <MESSAGE
 	id1="00403"
 	id2="setsebool"
@@ -25836,5 +25856,12 @@
 	eventcategory="1605000000"
 	functions="&lt;@hostname:*HDR(hhost)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;"
 	content="&lt;agent&gt;: Runing the script as &apos;&lt;filename&gt;&apos; at &lt;fld1&gt; as user &lt;username&gt; " />
+
+<MESSAGE
+	id1="audit_log"
+	id2="audit_log"
+	eventcategory="1605000000"
+	functions="&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',hfld1,hfld2,hfld3)&gt;&lt;@hostname:*HDR(hhost)&gt;&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;"
+	content="&lt;event_type&gt; msg=&lt;agent&gt;(&lt;info&gt;): &lt;event_description&gt;" />
 
 </DEVICEMESSAGES>
