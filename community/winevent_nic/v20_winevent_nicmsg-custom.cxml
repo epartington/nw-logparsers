@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEVICEMESSAGES
+	 name="winevent_nic"
+	 displayname="Windows Events (NIC)"
+	 group="Windows Hosts"
+	 type="7104">
+<VERSION
+	 xml="228"
+	 revision="119"
+	 checksum="b88007d796699e10705271fc882050f5"
+	 device="2.0"/>
+<MESSAGE
+	 id1="1_Microsoft-Windows-Sysmon:03"
+	 id2="1_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Process Create: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;CommandLine:{&quot;&lt;filename&gt;&quot;&lt;param&gt;|&lt;filename&gt;&lt;param&gt;}CurrentDirectory:&lt;directory&gt;User:&lt;username&gt;LogonGuid:&lt;fld24&gt;LogonId:&lt;sessionid&gt;TerminalSessionId:&lt;fld25&gt;IntegrityLevel:&lt;fld26&gt;Hashes:&lt;checksum&gt;ParentProcessGuid:&lt;fld27&gt;ParentProcessId:&lt;parent_pid&gt;ParentImage:&lt;parent_process&gt;ParentCommandLine:&lt;fld28&gt;"/>
+<MESSAGE
+	 id1="1_Microsoft-Windows-Sysmon:02"
+	 id2="1_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 insertBefore="1_Microsoft-Windows-Sysmon:01"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Process Create:&lt;space&gt;UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;CommandLine:{&quot;&lt;filename&gt;&quot;&lt;param&gt;|&lt;filename&gt;&lt;param&gt;}CurrentDirectory:&lt;directory&gt;User:&lt;username&gt;LogonGuid:&lt;fld24&gt;LogonId:&lt;sessionid&gt;TerminalSessionId:&lt;fld25&gt;IntegrityLevel:&lt;fld26&gt;Hashes:&lt;checksum&gt;ParentProcessGuid:&lt;fld27&gt;ParentProcessId:&lt;parent_pid&gt;ParentImage:&lt;parent_process&gt;ParentCommandLine:&lt;fld28&gt;"/>
+<MESSAGE
+	 id1="11_Microsoft-Windows-Sysmon:02"
+	 id2="11_Microsoft-Windows-Sysmon"
+	 eventcategory="1605020000"
+	 functions="&lt;@ec_subject:File&gt;&lt;@ec_activity:Create&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;&lt;@event_description:File created&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,File created: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld8&gt;ProcessId:&lt;process_id&gt;Image:&lt;service&gt;TargetFilename:&lt;filename&gt;CreationUtcTime:&lt;fld9&gt;"/>
+<MESSAGE
+	 id1="12_Microsoft-Windows-Sysmon:01"
+	 id2="12_Microsoft-Windows-Sysmon"
+	 eventcategory="1605020000"
+	 functions="&lt;@ec_subject:Registry&gt;&lt;@ec_activity:Modify&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;&lt;@event_description:Registry object added or deleted&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Registry object added or deleted: RuleName: &lt;rulename&gt; EventType:&lt;action&gt;UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld8&gt;ProcessId:&lt;process_id&gt;Image:&lt;service&gt;TargetObject:&lt;fld15&gt;"/>
+<MESSAGE
+	 id1="13_Microsoft-Windows-Sysmon:01"
+	 id2="13_Microsoft-Windows-Sysmon"
+	 eventcategory="1605020000"
+	 functions="&lt;@ec_subject:Registry&gt;&lt;@ec_activity:Modify&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;&lt;@event_description:Registry value set&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Registry value set: RuleName: &lt;rulename&gt; EventType:&lt;action&gt;UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld8&gt;ProcessId:&lt;process_id&gt;Image:&lt;service&gt;TargetObject:&lt;fld15&gt;Details:&lt;fld16&gt;"/>
+<MESSAGE
+	 id1="15_Microsoft-Windows-Sysmon:01"
+	 id2="15_Microsoft-Windows-Sysmon"
+	 eventcategory="1605020000"
+	 functions="&lt;@ec_subject:File&gt;&lt;@ec_activity:Create&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;&lt;@event_description:File stream created&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,File stream created: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld8&gt;ProcessId:&lt;process_id&gt;Image:&lt;service&gt;TargetFilename:&lt;filename&gt;CreationUtcTime:&lt;fld9&gt;Hash: MD5=&lt;fld10&gt;,SHA256=&lt;fld11&gt;"/>
+<MESSAGE
+	 id1="18_Microsoft-Windows-Sysmon:01"
+	 id2="18_Microsoft-Windows-Sysmon"
+	 eventcategory="1605020000"
+	 functions="&lt;@ec_subject:Registry&gt;&lt;@ec_activity:Modify&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;&lt;@event_description:Registry value set&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Pipe Connected: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld8&gt;ProcessId:&lt;process_id&gt;PipeName:&lt;service&gt;Image:&lt;process&gt;"/>
+<MESSAGE
+	 id1="2_Microsoft-Windows-Sysmon:03"
+	 id2="2_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;&lt;@change_new:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld24)&gt;&lt;@change_old:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld25)&gt;&lt;@change_attribute:File creation time&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,File creation time changed: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;TargetFilename:&lt;filename&gt;CreationUtcTime:&lt;fld24&gt;PreviousCreationUtcTime:&lt;fld25&gt;"/>
+<MESSAGE
+	 id1="2_Microsoft-Windows-Sysmon:02"
+	 id2="2_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 insertBefore="2_Microsoft-Windows-Sysmon:01"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;&lt;@change_new:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld24)&gt;&lt;@change_old:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld25)&gt;&lt;@change_attribute:File creation time&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,File creation time changed:&lt;space&gt;UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;TargetFilename:&lt;filename&gt;CreationUtcTime:&lt;fld24&gt;PreviousCreationUtcTime:&lt;fld25&gt;"/>
+<MESSAGE
+	 id1="3_Microsoft-Windows-Sysmon:03"
+	 id2="3_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Network connection detected: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;User:&lt;username&gt;Protocol:&lt;protocol&gt;Initiated:&lt;fld24&gt;SourceIsIpv6:&lt;fld25&gt;SourceIp:&lt;saddr&gt;SourceHostname:&lt;shost&gt;SourcePort:&lt;sport&gt;SourcePortName:&lt;fld26&gt;DestinationIsIpv6:&lt;fld27&gt;DestinationIp:&lt;daddr&gt;DestinationHostname:&lt;dhost&gt;DestinationPort:&lt;dport&gt;DestinationPortName:&lt;fld28&gt;"/>
+<MESSAGE
+	 id1="3_Microsoft-Windows-Sysmon:02"
+	 id2="3_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 insertBefore="3_Microsoft-Windows-Sysmon:01"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Network connection detected:&lt;space&gt;UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;User:&lt;username&gt;Protocol:&lt;protocol&gt;Initiated:&lt;fld24&gt;SourceIsIpv6:&lt;fld25&gt;SourceIp:&lt;saddr&gt;SourceHostname:&lt;shost&gt;SourcePort:&lt;sport&gt;SourcePortName:&lt;fld26&gt;DestinationIsIpv6:&lt;fld27&gt;DestinationIp:&lt;daddr&gt;DestinationHostname:&lt;dhost&gt;DestinationPort:&lt;dport&gt;DestinationPortName:&lt;fld28&gt;"/>
+<MESSAGE
+	 id1="5_Microsoft-Windows-Sysmon:03"
+	 id2="5_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Process terminated: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;"/>
+<MESSAGE
+	 id1="5_Microsoft-Windows-Sysmon:02"
+	 id2="5_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 insertBefore="5_Microsoft-Windows-Sysmon:01"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Process terminated: &lt;space&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;"/>
+<MESSAGE
+	 id1="6_Microsoft-Windows-Sysmon:03"
+	 id2="6_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Driver loaded: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ImageLoaded:&lt;filename&gt;Hashes:&lt;checksum&gt;Signed:&lt;fld23&gt;Signature:&lt;signame&gt;"/>
+<MESSAGE
+	 id1="6_Microsoft-Windows-Sysmon:02"
+	 id2="6_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 insertBefore="6_Microsoft-Windows-Sysmon:01"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Driver loaded: &lt;space&gt; UtcTime:&lt;fld7&gt;ImageLoaded:&lt;filename&gt;Hashes:&lt;checksum&gt;Signed:&lt;fld23&gt;Signature:&lt;signame&gt;"/>
+<MESSAGE
+	 id1="7_Microsoft-Windows-Sysmon:03"
+	 id2="7_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Image loaded: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;ImageLoaded:&lt;filename&gt;Hashes:&lt;checksum&gt;Signed:&lt;fld24&gt;Signature:&lt;signame&gt;"/>
+<MESSAGE
+	 id1="7_Microsoft-Windows-Sysmon:02"
+	 id2="7_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 insertBefore="7_Microsoft-Windows-Sysmon:01"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,Image loaded: &lt;space&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;ImageLoaded:&lt;filename&gt;Hashes:&lt;checksum&gt;Signed:&lt;fld24&gt;Signature:&lt;signame&gt;"/>
+<MESSAGE
+	 id1="8_Microsoft-Windows-Sysmon:03"
+	 id2="8_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,CreateRemoteThread detected: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;SourceProcessGuid:&lt;fld23&gt;SourceProcessId:&lt;parent_pid&gt;SourceImage:&lt;parent_process&gt;TargetProcessGuid:&lt;fld24&gt;TargetProcessId:&lt;process_id&gt;TargetImage:&lt;process&gt;NewThreadId:&lt;fld25&gt;StartAddress:&lt;fld26&gt;StartModule:&lt;fld27&gt;StartFunction:&lt;fld28&gt;"/>
+<MESSAGE
+	 id1="8_Microsoft-Windows-Sysmon:02"
+	 id2="8_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 insertBefore="8_Microsoft-Windows-Sysmon:01"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,CreateRemoteThread detected: &lt;space&gt; UtcTime:&lt;fld7&gt;SourceProcessGuid:&lt;fld23&gt;SourceProcessId:&lt;parent_pid&gt;SourceImage:&lt;parent_process&gt;TargetProcessGuid:&lt;fld24&gt;TargetProcessId:&lt;process_id&gt;TargetImage:&lt;process&gt;NewThreadId:&lt;fld25&gt;StartAddress:&lt;fld26&gt;StartModule:&lt;fld27&gt;StartFunction:&lt;fld28&gt;"/>
+<MESSAGE
+	 id1="9_Microsoft-Windows-Sysmon:03"
+	 id2="9_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,RawAccessRead detected: RuleName: &lt;rulename&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;Device:&lt;device&gt;"/>
+<MESSAGE
+	 id1="9_Microsoft-Windows-Sysmon:02"
+	 id2="9_Microsoft-Windows-Sysmon"
+	 eventcategory="1606000000"
+	 insertBefore="9_Microsoft-Windows-Sysmon:01"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($MSG,'%B %F %N:%U:%O %W',datetime)&gt;&lt;@effective_time:*EVNTTIME($MSG,'%W/%G/%F %N:%U:%O %P','%W-%G-%F %N:%U:%O',fld7)&gt;"
+	 content="&lt;event_log&gt;,rn=&lt;fld1&gt;cid=&lt;fld2&gt;eid=&lt;fld3&gt;,&lt;fld12&gt;&lt;datetime&gt;,&lt;id&gt;,&lt;event_source&gt;,&lt;event_user&gt;,&lt;event_type&gt;,&lt;event_computer&gt;,&lt;category&gt;,&lt;fld22&gt;,RawAccessRead detected: &lt;space&gt; UtcTime:&lt;fld7&gt;ProcessGuid:&lt;fld23&gt;ProcessId:&lt;process_id&gt;Image:&lt;process&gt;Device:&lt;device&gt;"/>
+
+</DEVICEMESSAGES>
