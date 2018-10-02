@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DEVICEMESSAGES
+	name="windows"
+	displayname="Microsoft Windows"
+	group="Windows Hosts">
+<VERSION
+	xml="6"
+	checksum="e8b566d29c33144440986860c4066b80"
+	revision="117"
+	device="2.0" />
+
+<MESSAGE
+	id1="WINDOWS_GENERIC"
+	id2="WINDOWS_GENERIC"
+	eventcategory="1901000000"
+	missField="true"
+	tagval="true"
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@event_time:*EVNTTIME($MSG,'%W-%G-%FT%N:%U:%O',fld1)&gt;"
+    content="Agent=&lt;agent&gt; AgentIP=&lt;hostip&gt; AgentComputer=&lt;hostname&gt; AgentTime=&lt;event_time_string&gt; TimeCreatedSystemTime=&lt;fld1&gt; EventID=&lt;id&gt; Provider=&lt;event_source&gt; Channel=&lt;event_log&gt; Level=&lt;severity&gt; Task=&lt;category&gt; Version=&lt;version&gt; ProcessID=&lt;process_id&gt; Computer=&lt;event_computer&gt; RecordId=&lt;fld&gt; Message=&lt;event_description&gt; RuleName=&lt;rule&gt; SourceIp=&lt;saddr&gt; SourceHostname=&lt;shost&gt; DestinationIp=&lt;daddr&gt; DestinationHostname=&lt;dhost&gt; DestinationPort=&lt;dport&gt; HostApplication=&lt;param.dst&gt; CommandLine=&lt;param.dst&gt; ParentCommandLine=&lt;param.src&gt; User=&lt;user&gt; ProcessId=&lt;process_id&gt; Image=&lt;process&gt; LogonId=&lt;sessionid&gt; ParentProcessId=&lt;parent_pid&gt; ParentImage=&lt;parent_process&gt; TargetFilename=&lt;filename&gt; Protocol=&lt;protocol&gt; State=&lt;event_state&gt; ImageLoaded=&lt;filename&gt; Signature=&lt;signame&gt; SourceProcessId=&lt;parent_pid&gt ; SourceImage=&lt;parent_process&gt; Device=&lt;device&gt; CurrentDirectory=&lt;directory&gt;"/>
+
+</DEVICEMESSAGES>
