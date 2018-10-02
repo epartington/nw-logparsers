@@ -4,13 +4,12 @@
 	displayname="IBM WebSphere"
 	group="Application Servers">
 <VERSION
-		xml="46"
-		checksum="b13f6f4d9ffc0694b8abbd28f7d4bbde"
-		revision="115"
+		xml="48"
+		checksum="fa8b6efa4f1b56d21dd0e8aa4fcd5f6b"
+		revision="121"
 		device="2.0"/>
 
 <TAGVALMAP
-		delimiter=" |  "
 		pairdelimiter=" | "/>
 <HEADER
 	id1="0001"
@@ -4130,12 +4129,5 @@
 
 
 
-<MESSAGE
-	id1="IBMWEBSPHERE_GENERIC:01"
-	id2="IBMWEBSPHERE_GENERIC"
-	eventcategory="1605000000"
-	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="&lt;fld&gt;" />
-
-		
+	
 </DEVICEMESSAGES>

@@ -4,9 +4,9 @@
 	displayname="Cisco Wireless LAN Controller"
 	group="Wireless Devices">
 <VERSION 
-	xml="27"
-	checksum="09cd9f8816660fcd0d92316768aed4a2"
-	revision="120"
+	xml="32"
+	checksum="fa31248c73ebd6224f6343c8f71e866b"
+	revision="122"
 	device="2.0" />
 <TAGVALMAP
 	pairdelimiter="," encapsulator="&quot;" />
@@ -156,13 +156,13 @@
 	id2="AAA-6-DB_ADD_BLACKLIST_USR" 
 	eventcategory="1602010000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Adding blacklist user ^amp92^&lt;username&gt;^amp92^ to AAA database." />
+	content="Adding blacklist user &#x092;&lt;username&gt;&#x092; to AAA database." />
 <MESSAGE 
 	id1="AAA-6-DB_ADD_USER"
 	id2="AAA-6-DB_ADD_USER" 
 	eventcategory="1602010000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Adding user {^amp92^&lt;username&gt;^amp92^ | &apos;&lt;username&gt;&apos;} to AAA database." />
+	content="Adding user {&#x092;&lt;username&gt;&#x092; | &apos;&lt;username&gt;&apos;} to AAA database." />
 <MESSAGE 
 	id1="AAA-3-DB_INIT_FAILED"
 	id2="AAA-3-DB_INIT_FAILED" 
@@ -198,13 +198,13 @@
 	id2="AAA-3-EAPMETHOD_ADD_FAILED" 
 	eventcategory="1703000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Unable to add method ^amp92^&lt;rulename&gt;^amp92^ to EAP profile for user ^amp92^&lt;username&gt;^amp92^. &lt;info&gt;." />
+	content="Unable to add method &#x092;&lt;rulename&gt;&#x092; to EAP profile for user &#x092;&lt;username&gt;&#x092;. &lt;info&gt;." />
 <MESSAGE 
 	id1="AAA-3-EAPPROF_ADD_FAILED"
 	id2="AAA-3-EAPPROF_ADD_FAILED" 
 	eventcategory="1703000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Unable to add EAP profile for user ^amp92^&lt;username&gt;^amp92^. &lt;info&gt;." />
+	content="Unable to add EAP profile for user &#x092;&lt;username&gt;&#x092;. &lt;info&gt;." />
 <MESSAGE 
 	id1="AAA-3-FREELIST_ADD_FAILED"
 	id2="AAA-3-FREELIST_ADD_FAILED" 
@@ -258,7 +258,7 @@
 	id2="AAA-4-GUESTUSER_DEL_FAILED" 
 	eventcategory="1602020000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Unable to delete the user ^amp92^&lt;username&gt;^amp92^. &lt;info&gt;." />
+	content="Unable to delete the user &#x092;&lt;username&gt;&#x092;. &lt;info&gt;." />
 <MESSAGE 
 	id1="AAA-4-INVALID_AUTHENTICATOR"
 	id2="AAA-4-INVALID_AUTHENTICATOR"
@@ -445,7 +445,7 @@
 	id2="AAA-4-RADIUS_RESPONSE_FAILED" 
 	eventcategory="1303000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@action:RADIUS server failed to respond to request&gt;"
-	content=" RADIUS server &lt;paddr&gt; failed to respond to request(ID &lt;fld6&gt;) for STA &lt;saddr&gt; / user &apos;&lt;username&gt;&apos;" />
+	content=" RADIUS server &lt;daddr&gt;:&lt;dport&gt; failed to respond to request(ID &lt;fld6&gt;) for STA &lt;smacaddr&gt; / user &apos;&lt;username&gt;&apos;" />
 <MESSAGE 
 	id1="AAA-4-RADIUS_RES_TRUNC"
 	id2="AAA-4-RADIUS_RES_TRUNC" 
@@ -481,7 +481,7 @@
 	id2="AAA-4-REBUILD_DEFAULT_CONFIG" 
 	eventcategory="1701000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Rebuilding the default configuration for ^amp92^&lt;info&gt;^amp92^" />
+	content="Rebuilding the default configuration for &#x092;&lt;info&gt;&#x092;" />
 <MESSAGE 
 	id1="AAA-6-RECREATE_ADMIN_LOGIN"
 	id2="AAA-6-RECREATE_ADMIN_LOGIN" 
@@ -541,7 +541,7 @@
 	id2="AAA-5-AAA_AUTH_ADMIN_USER" 
 	eventcategory="1401030000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@action:Authentication failed&gt;&lt;@ec_outcome:Failure&gt;"
-	content="Authentication failed for admin user ^amp92^&lt;username&gt;^amp92^" />
+	content="Authentication failed for admin user &#x092;&lt;username&gt;&#x092;" />
 <MESSAGE 
 	id1="AAA-5-AAA_AUTH_ADMIN_USER:02" 
 	id2="AAA-5-AAA_AUTH_ADMIN_USER" 
@@ -559,13 +559,13 @@
 	id2="AAA-5-AAA_AUTH_NETWORK_USER" 
 	eventcategory="1301000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@action:Authentication failed&gt;&lt;@ec_outcome:Failure&gt;"
-	content="Authentication failed for network user {^amp92^&lt;username&gt;^amp92^ | &apos;&lt;username&gt;&apos;}" />
+	content="Authentication failed for network user {&#x092;&lt;username&gt;&#x092; | &apos;&lt;username&gt;&apos;}" />
 <MESSAGE 
 	id1="AAA-5-AAA_AUTH_NETWORK_USER:01" 
 	id2="AAA-5-AAA_AUTH_NETWORK_USER" 
 	eventcategory="1302000000" 
 	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@action:Authentication suceeded&gt;&lt;@ec_outcome:Success&gt;"
-	content="Authentication succeeded for network user {^amp92^&lt;username&gt;^amp92^|&apos;&lt;username&gt;&apos;}" />
+	content="Authentication succeeded for network user {&#x092;&lt;username&gt;&#x092;|&apos;&lt;username&gt;&apos;}" />
 <MESSAGE 
 	id1="AAA-5-RADSERVER_NOT_FOUND"
 	id2="AAA-5-RADSERVER_NOT_FOUND" 
@@ -687,19 +687,19 @@
 	id2="ACL-3-DB_LOCK_FAILED" 
 	eventcategory="1603040000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Couldn^amp92^t get exclusive access on the Acl database. &lt;fld10&gt;." />
+	content="Couldn&#x092;t get exclusive access on the Acl database. &lt;fld10&gt;." />
 <MESSAGE 
 	id1="ACL-3-DB_UNLOCK_FAILED" 
 	id2="ACL-3-DB_UNLOCK_FAILED" 
 	eventcategory="1603040000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Couldn^amp92^t release exclusive access on the Acl database. &lt;fld10&gt;." />
+	content="Couldn&#x092;t release exclusive access on the Acl database. &lt;fld10&gt;." />
 <MESSAGE 
 	id1="ACL-3-ENTRY_CREATE_FAILED" 
 	id2="ACL-3-ENTRY_CREATE_FAILED" 
 	eventcategory="1501050000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Couldn^amp92^t create ACL &lt;rulename&gt;. &lt;info&gt;." />
+	content="Couldn&#x092;t create ACL &lt;rulename&gt;. &lt;info&gt;." />
 <MESSAGE 
 	id1="ACL-3-ENTRY_DELETE_FAILED" 
 	id2="ACL-3-ENTRY_DELETE_FAILED" 
@@ -717,7 +717,7 @@
 	id2="ACL-3-GET_FREE_ACL" 
 	eventcategory="1501050000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Couldn^amp92^t get an unused ACL. &lt;fld10&gt;." />
+	content="Couldn&#x092;t get an unused ACL. &lt;fld10&gt;." />
 <MESSAGE 
 	id1="ACL-3-GET_NAME_BY_ID_FAILED" 
 	id2="ACL-3-GET_NAME_BY_ID_FAILED" 
@@ -1025,6 +1025,13 @@
 	eventcategory="1603000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:Could not find the mobile in internal database&gt;"
 	content=" Could not find the mobile &lt;smacaddr&gt; in internal database" />
+
+<MESSAGE 
+	id1="APF-4-MS_NOT_FOUND_IN_BLACKLIST_TREE" 
+	id2="APF-4-MS_NOT_FOUND_IN_BLACKLIST_TREE" 
+	eventcategory="1609000000" 
+	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:Could not find the mobile in internal blacklist database&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	content=" Could not find the mobile &lt;macaddr&gt; in internal blacklist database" />
 
 <MESSAGE 
 	id1="APF-4-PROC_DOT11_MAC_MGMT_DATA_FAILED" 
@@ -2153,7 +2160,7 @@
 	id2="IOS-3-PEER_CERT_VER_FAIL" 
 	eventcategory="1401030000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="LOCAL-AUTH: Peer cert (user ^amp92^&lt;username&gt;^amp92^) failed ^amp92^&lt;info&gt;^amp92^ check" />
+	content="LOCAL-AUTH: Peer cert (user &#x092;&lt;username&gt;&#x092;) failed &#x092;&lt;info&gt;&#x092; check" />
 <MESSAGE 
 	id1="IOS-3-PEER_CERT_ZERO_LEN" 
 	id2="IOS-3-PEER_CERT_ZERO_LEN" 
@@ -2414,7 +2421,7 @@
 	id2="LWAPP-3-AAA_ERR2" 
 	eventcategory="1603010000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Invalid AAA state (^amp92^&lt;info&gt;^amp92^) for AP &lt;macaddr&gt;" />
+	content="Invalid AAA state (&#x092;&lt;info&gt;&#x092;) for AP &lt;macaddr&gt;" />
 <MESSAGE 
 	id1="LWAPP-3-ADD_OSSID_ERR" 
 	id2="LWAPP-3-ADD_OSSID_ERR" 
@@ -2607,7 +2614,7 @@
 	id2="LWAPP-3-CERT_ERR2" 
 	eventcategory="1603000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Unable to retrieve controller^amp92^s certificate for AP &lt;macaddr&gt;" />
+	content="Unable to retrieve controller&#x092;s certificate for AP &lt;macaddr&gt;" />
 <MESSAGE 
 	id1="LWAPP-3-CERT_ERR4" 
 	id2="LWAPP-3-CERT_ERR4" 
@@ -2777,7 +2784,7 @@
 	id2="LWAPP-3-DISC_INTF_STATE_ERR" 
 	eventcategory="1603030000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Unable to get &lt;info&gt; state of interface ^amp92^&lt;interface&gt;^amp92^ (port &lt;event_source&gt;), not returning interface in discovery response" />
+	content="Unable to get &lt;info&gt; state of interface &#x092;&lt;interface&gt;&#x092; (port &lt;event_source&gt;), not returning interface in discovery response" />
 <MESSAGE 
 	id1="LWAPP-0-DISC_LEN_ERR1" 
 	id2="LWAPP-0-DISC_LEN_ERR1" 
@@ -2873,7 +2880,7 @@
 	id2="LWAPP-3-DUP_IP" 
 	eventcategory="1801010000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Adding client &lt;smacaddr&gt; to exclusion list due to IP Address conflict with AP ^amp92^&lt;hostname&gt;^amp92^" />
+	content="Adding client &lt;smacaddr&gt; to exclusion list due to IP Address conflict with AP &#x092;&lt;hostname&gt;&#x092;" />
 <MESSAGE 
 	id1="LWAPP-3-ECHO_ERR" 
 	id2="LWAPP-3-ECHO_ERR" 
@@ -3101,7 +3108,7 @@
 	id2="LWAPP-3-IP_ERR" 
 	eventcategory="1703000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Could not plumb AP^amp92^s (&lt;macaddr&gt;) IP address (&lt;hostip&gt;), &lt;info&gt;) and VLAN (&lt;vlan&gt;) to fast path" />
+	content="Could not plumb AP&#x092;s (&lt;macaddr&gt;) IP address (&lt;hostip&gt;), &lt;info&gt;) and VLAN (&lt;vlan&gt;) to fast path" />
 <MESSAGE 
 	id1="LWAPP-3-IP_PROT_ERR" 
 	id2="LWAPP-3-IP_PROT_ERR" 
@@ -4534,7 +4541,7 @@
 	id2="LWAPP-3-TX_ERR4" 
 	eventcategory="1603000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content="Unable to retrieve AP^amp92^s (&lt;macaddr&gt;) reachability information (VLAN identifier, port number, etc) to &lt;info&gt;" />
+	content="Unable to retrieve AP&#x092;s (&lt;macaddr&gt;) reachability information (VLAN identifier, port number, etc) to &lt;info&gt;" />
 <MESSAGE 
 	id1="LWAPP-3-TX_ERR5" 
 	id2="LWAPP-3-TX_ERR5" 
@@ -5092,6 +5099,13 @@
 	content=" Port &lt;sport&gt; Admin Mode is Disable!" />
 
 <MESSAGE 
+	id1="NIM-3-ADMIN_MODE_ENABLE_RETRY" 
+	id2="NIM-3-ADMIN_MODE_ENABLE_RETRY" 
+	eventcategory="1603000000" 
+	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:Port Admin Mode Enabled&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;&lt;@dclass_counter1_string:Retry Count&gt;"
+	content=" Port &lt;network_port&gt; Admin Mode is Enabled (retry-&lt;dclass_counter1&gt;)!" />
+
+<MESSAGE 
 	id1="NIM-3-CANT_DISABLE_MCAST" 
 	id2="NIM-3-CANT_DISABLE_MCAST" 
 	eventcategory="1603000000" 
@@ -5177,7 +5191,7 @@
 	id2="APF-4-REGISTER_IPADD_ON_MSCB_FAILED" 
 	eventcategory="1603040000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
-	content=" Could not Register IP Add on MSCB. { &lt;reason&gt; Address:&lt;macaddr&gt; | &lt;reason&gt;address:&lt;macaddr&gt; }" />
+	content=" Could not Register IP Add on MSCB. {&lt;reason&gt;address:&lt;macaddr&gt; [&lt;fld1&gt; |&lt;reason&gt; Address:&lt;macaddr&gt; | &lt;reason&gt;address:&lt;macaddr&gt; }" />
 
 <MESSAGE 
 	id1="APF-4-ROGUE_AP_ADD_FAILED"
@@ -5205,6 +5219,14 @@
 	eventcategory="1601000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:Unable to create username&gt;"
 	content=" Unable to create username &lt;username&gt; for mobile&lt;smacaddr&gt;" />
+
+<MESSAGE 
+	id1="APF-3-APF_CHANNEL_CHANGE"
+	id2="APF-3-APF_CHANNEL_CHANGE" 
+	eventcategory="1603000000" 
+	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:Client deletion failed due to Channel change and Spectrum mgmt bit set.&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	content=" Client deletion failed. Clt mac:&lt;macaddr&gt; Channel Change Occured. Spectrum Mgmt bit set." />
+
 
 <MESSAGE 
 	id1="CAPWAP-3-DTLS_CONN_ERR" 
@@ -5246,6 +5268,14 @@
 	eventcategory="1603000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:Unable to store capwap fragment from AP&gt;"
 	content=" Unable to store capwap fragment from &lt;smacaddr&gt;." />
+
+<MESSAGE 
+	id1="CAPWAP-3-POST_DECODE_ERR" 
+	id2="CAPWAP-3-POST_DECODE_ERR" 
+	eventcategory="1603000000" 
+	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;&lt;@event_description:Post decode processing failed from AP&gt;"
+	content="Post decode processing failed for &lt;fld1&gt; from AP &lt;smacaddr&gt;" />
+
 
 <MESSAGE 
 	id1="CAPWAP-3-SEM_RELEASE_ERR"
@@ -6412,6 +6442,21 @@
 	content=" Unable to find Mobile &lt;smacaddr&gt; entry in the database, &lt;info&gt;" />
 	
 <MESSAGE
+	id1="APF_HA-4-SYNC_RETRANSMIT_WARNING"
+	id2="APF_HA-4-SYNC_RETRANSMIT_WARNING"
+	eventcategory="1609000000"
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description: Maximum retransmission exceeded for client &gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	content=" Maximum retransmission exceeded for client (&lt;smacaddr&gt; )data sync block:&lt;fld1&gt;. Retry after &lt;duration&gt; secs." />
+
+<MESSAGE
+	id1="APF_HA-3-SYNC_RETRANSMIT_FAIL"
+	id2="APF_HA-3-SYNC_RETRANSMIT_FAIL"
+	eventcategory="1603020000"
+	functions="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description: Maximum retransmission exceeded for client &gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	content=" Maximum retransmission exceeded for client (&lt;smacaddr&gt; )data sync block:&lt;fld1&gt;. Retry after &lt;duration&gt; secs." />
+
+
+<MESSAGE
 	id1="PEM-6-QVLAN_INTF_REMAP"
 	id2="PEM-6-QVLAN_INTF_REMAP"
 	eventcategory="1603000000"
@@ -6439,6 +6484,13 @@
 	eventcategory="1603000000" 
 	functions="&lt;@msg:*PARMVAL($MSG)&gt;"
 	content="Ping response from &lt;saddr&gt; is invalid. Incorrect checksum. " />
+
+<MESSAGE 
+	id1="RMGR-3-RED_API_RET_ERROR" 
+	id2="RMGR-3-RED_API_RET_ERROR" 
+	eventcategory="1603000000" 
+	functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	content="&lt;event_description&gt;" />
 
 <MESSAGE
 	id1="EMWEB-3-READ_ERROR"
@@ -6697,6 +6749,13 @@
 	content="TACACS+ server switchover {failed as there is no other server active|failed}. Current server is &lt;saddr&gt; (port:&lt;sport&gt;)[&lt;info&gt;] " />
 
 <MESSAGE
+	 id1="LOG-4-Q_IND:26"
+	 id2="LOG-4-Q_IND"
+	 eventcategory="1801030000"
+	 functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:Remote client closed connection&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	 content="Remote client closed connection (bytes read=&lt;bytes&gt;, errno=&lt;resultcode&gt;).&lt;info&gt;"/>
+
+<MESSAGE
 	id1="LOG-4-Q_IND:24"
 	id2="LOG-4-Q_IND"
 	eventcategory="1603000000"
@@ -6882,7 +6941,58 @@
 	content="Failed to receive data on the socket after &lt;fld1&gt; seconds." />
 
 	 	 
-<MESSAGE 
+<MESSAGE
+	 id1="LWAPP-3-INVALID_SLOT:01"
+	 id2="LWAPP-3-INVALID_SLOT"
+	 eventcategory="1603000000"
+	 functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@reason:Could not allocate association identifier&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	 content="&lt;event_description&gt;Could not allocate association identifier; AP&lt;macaddr&gt;"/>
+
+<MESSAGE
+	 id1="LOG-5-Q_IND:02"
+	 id2="LOG-5-Q_IND"
+	 eventcategory="1605000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:Controller is connecting to Tacacs server&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	 content="Controller is connecting to Tacacs server IP:&lt;daddr&gt;"/>
+
+<MESSAGE
+	 id1="APF-6-USER_DEL_FAILED"
+	 id2="APF-6-USER_DEL_FAILED"
+	 eventcategory="1605000000"
+	 functions="&lt;@:*SYSVAL($ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;@event_description:Unable to delete username&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	 content="Unable to delete username&lt;username&gt;for mobile&lt;smacaddr&gt;"/>
+
+<MESSAGE
+	 id1="LWAPP-4-AP_DB_ERR1"
+	 id2="LWAPP-4-AP_DB_ERR1"
+	 eventcategory="1603000000"
+	 functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;&lt;@event_description:Unable to find AP entry in the database&gt;"
+	 content="The sytem is unable to find AP&lt;macaddr&gt;entry in the database, &lt;reason&gt;"/>
+
+<MESSAGE
+	 id1="AAA-5-SELECT_CALL_SUCCESS"
+	 id2="AAA-5-SELECT_CALL_SUCCESS"
+	 eventcategory="1605000000"
+	 functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@event_description:Controller is connecting to Tacacs server&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	 content="Controller is connecting to Tacacs server IP:&lt;daddr&gt;"/>
+
+ 
+<MESSAGE
+	 id1="LWAPP-3-RD_ERR4:01"
+	 id2="LWAPP-3-RD_ERR4"
+	 eventcategory="1603000000"
+	 functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	 content="The system detects an invalid regulatory domain &lt;domain&gt; for AP &lt;macaddr&gt;"/> 
+
+<MESSAGE
+	 id1="SYSTEM-6-MBUF_ALREADY_FREE"
+	 id2="SYSTEM-6-MBUF_ALREADY_FREE"
+	 eventcategory="1605000000"
+	 functions="&lt;@msg:*PARMVAL($MSG)&gt;&lt;@:*SYSVAL($ID1)&gt;&lt;@event_time:*EVNTTIME($HDR,'%B %F %H:%U:%O',month,day,time)&gt;"
+	 content="&lt;info&gt;. mbuf = &lt;fld1&gt;, tail = &lt;fld2&gt;, head =&lt;fld3&gt;, i = &lt;fld4&gt;, free = &lt;fld5&gt;"/> 
+
+ 
+ <MESSAGE 
 	id1="CISCOWLC_GENERIC" 
 	id2="CISCOWLC_GENERIC"
 	eventcategory="1901000000"
