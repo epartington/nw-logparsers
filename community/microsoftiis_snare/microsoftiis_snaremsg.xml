@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<DEVICEMESSAGES
+        name="microsoftiis_snare"
+        displayname="Microsoft IIS Snare"
+        group="Web Logs">
+	<VERSION
+		xml="1"
+		checksum=""
+		revision="2"
+		enVision=""
+		device="2.0"/>
+
+<!--
+ESI.DeviceClass = Web Logs
+-->
+
+	<HEADER
+		id1="0001"
+		id2="0001"
+		content="&lt;hmonth&gt; &lt;hday&gt; &lt;hhour&gt;:&lt;hmin&gt;:&lt;hsec&gt; &lt;hdevice&gt; &lt;messageid&gt; &lt;hfld1&gt; &lt;!payload&gt;"/>
+	
+	<MESSAGE
+		level="6"
+		parse="1"
+		parsedefvalue="1"
+		tableid="82"
+		id1="IISWebLog:01"
+		id2="IISWebLog"
+		eventcategory="1204000000"
+		content="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;year&gt;-&lt;month&gt;-&lt;day&gt;^||^&lt;time&gt;^||^&lt;service&gt;^||^&lt;dhost&gt;^||^&lt;daddr&gt;^||^&lt;action&gt;^||^&lt;webpage&gt;^||^&lt;web_query&gt;^||^&lt;dport&gt;^||^&lt;username&gt;^||^&lt;saddr&gt;^||^&lt;version&gt;^||^&lt;user_agent&gt;^||^&lt;web_cookie&gt;^||^&lt;url&gt;^||^&lt;hostname&gt;^||^&lt;resultcode&gt;^||^&lt;result&gt;^||^&lt;disposition&gt;^||^&lt;sbytes&gt;^||^&lt;rbytes&gt;^||^&lt;duration&gt;^||^&quot;&lt;stransaddr&gt;:&lt;stransport&gt;&quot;"/>
+
+	<MESSAGE
+		level="6"
+		parse="1"
+		parsedefvalue="1"
+		tableid="82"
+		id1="IISWebLog:04"
+		id2="IISWebLog"
+		eventcategory="1204000000"
+		content="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;year&gt;-&lt;month&gt;-&lt;day&gt; &lt;time&gt; &lt;service&gt; &lt;dhost&gt; &lt;daddr&gt; &lt;action&gt; &lt;webpage&gt; &lt;web_query&gt; &lt;dport&gt; &lt;username&gt; &lt;saddr&gt; &lt;version&gt; &lt;user_agent&gt; &lt;web_cookie&gt; &lt;url&gt; &lt;hostname&gt; &lt;resultcode&gt; &lt;result&gt; &lt;disposition&gt; &lt;sbytes&gt; &lt;rbytes&gt; &lt;duration&gt; &lt;web_host&gt;&lt;web_cookie&gt;"/>
+				
+	<MESSAGE
+		level="6"
+		parse="1"
+		parsedefvalue="1"
+		tableid="82"
+		id1="IISWebLog:02"
+		id2="IISWebLog"
+		eventcategory="1204000000"
+		content="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;year&gt;-&lt;month&gt;-&lt;day&gt; &lt;time&gt; &lt;service&gt; &lt;dhost&gt; &lt;daddr&gt; &lt;action&gt; &lt;webpage&gt; &lt;web_query&gt; &lt;dport&gt; &lt;username&gt; &lt;saddr&gt; &lt;version&gt; &lt;user_agent&gt; &lt;web_cookie&gt; &lt;url&gt; &lt;hostname&gt; &lt;resultcode&gt; &lt;result&gt; &lt;disposition&gt; &lt;sbytes&gt; &lt;rbytes&gt; &lt;duration&gt;"/>
+		
+	<MESSAGE
+		level="6"
+		parse="1"
+		parsedefvalue="1"
+		tableid="82"
+		id1="IISWebLog:03"
+		id2="IISWebLog"
+		eventcategory="1204000000"
+		content="&lt;@:*SYSVAL($MSGID,$ID1)&gt;&lt;@msg:*PARMVAL($MSG)&gt;&lt;year&gt;-&lt;month&gt;-&lt;day&gt; &lt;time&gt; &lt;service&gt; &lt;dhost&gt; &lt;daddr&gt; &lt;action&gt; &lt;webpage&gt; &lt;web_query&gt; &lt;dport&gt; &lt;username&gt; &lt;saddr&gt; &lt;version&gt; &lt;user_agent&gt; &lt;web_cookie&gt; &lt;url&gt; &lt;hostname&gt; &lt;resultcode&gt; &lt;result&gt; &lt;disposition&gt; &lt;duration&gt;"/>
+	
+</DEVICEMESSAGES>
